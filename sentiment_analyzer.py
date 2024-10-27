@@ -13,14 +13,14 @@ st.write('\n\n')
 
 @st.cache_data
 def get_all_data():
-    root = "Datasets/"
-    with open(root + "imdb_labelled.txt", "r") as text_file:
+   # root = "Datasets/"
+    with open("imdb_labelled.txt", "r") as text_file:
         data = text_file.read().split('\n')
          
-    with open(root + "amazon_cells_labelled.txt", "r") as text_file:
+    with open("amazon_cells_labelled.txt", "r") as text_file:
         data += text_file.read().split('\n')
 
-    with open(root + "yelp_labelled.txt", "r") as text_file:
+    with open("yelp_labelled.txt", "r") as text_file:
         data += text_file.read().split('\n')
 
     return data
